@@ -8,4 +8,7 @@
   <string name="enter_your_password">Enter your password</string>
   <string name="login">Login</string>
   <string name="sign_up">Sign Up</string>
+  <string name="welcome_to_shoes_list_application">Welcome to shoes list application!</string>
+  <string name="welcome_textview_description">In this application you will be able to browse and add best shoes in the market</string>
+  <string name="check_instructions">Check Instructions</string>
 </resources>
