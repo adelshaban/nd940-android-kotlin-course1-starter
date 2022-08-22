@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_instruction.xml" value="0.30512820512820515" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.30512820512820515" />
+        <entry key="app/src/main/res/layout/fragment_shoes_item.xml" value="0.30512820512820515" />
+        <entry key="app/src/main/res/layout/fragment_shoes_list.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.1" />
         <entry key="app/src/main/res/layout/instruction_welcome.xml" value="0.15520833333333334" />
       </map>

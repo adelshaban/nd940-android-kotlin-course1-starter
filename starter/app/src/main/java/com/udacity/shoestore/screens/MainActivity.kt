@@ -19,16 +19,12 @@ class MainActivity : AppCompatActivity() {
         )
         Timber.plant(Timber.DebugTree())
 
-        //traceViewModel()
-    }
-
-    fun traceViewModel(){
         ShoesListViewModelHelper.generateDummyData(this, 10)
-        val viewModel: ShoesListViewModel =
-            ViewModelProvider(this).get(ShoesListViewModel::class.java)
 
-        for (shoe in viewModel.listOfShoesLiveData.value.orEmpty()) {
-            Timber.i(shoe.toString())
-        }
+        // Only for tracing
+        ShoesListViewModelHelper.traceViewModel(this)
+
     }
+
+
 }

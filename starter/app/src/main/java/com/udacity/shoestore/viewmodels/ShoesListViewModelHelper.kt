@@ -3,6 +3,7 @@ package com.udacity.shoestore.viewmodels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelStoreOwner
 import com.udacity.shoestore.models.Shoe
+import timber.log.Timber
 
 class ShoesListViewModelHelper {
     companion object {
@@ -23,6 +24,16 @@ class ShoesListViewModelHelper {
                 "This is shoe#$index"
             )
             return shoe
+        }
+
+        fun traceViewModel(owner: ViewModelStoreOwner){
+
+            val viewModel: ShoesListViewModel =
+                ViewModelProvider(owner).get(ShoesListViewModel::class.java)
+
+            for (shoe in viewModel.listOfShoesLiveData.value.orEmpty()) {
+                Timber.i(shoe.toString())
+            }
         }
     }
 }

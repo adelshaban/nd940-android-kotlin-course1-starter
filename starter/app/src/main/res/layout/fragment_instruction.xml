@@ -28,12 +28,12 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
     <Button
-      android:id="@+id/check_instruction_button"
+      android:id="@+id/view_shoes_list_button"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="272dp"
       android:layout_marginStart="136dp"
-      android:text="@string/check_instructions"
+      android:text="View Shoes List"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 
