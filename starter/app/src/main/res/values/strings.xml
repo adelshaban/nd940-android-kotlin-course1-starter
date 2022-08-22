@@ -11,4 +11,6 @@
   <string name="welcome_to_shoes_list_application">Welcome to shoes list application!</string>
   <string name="welcome_textview_description">In this application you will be able to browse and add best shoes in the market</string>
   <string name="check_instructions">Check Instructions</string>
+  <string name="instructions">Instructions</string>
+  <string name="instructions_description">If you are a member, You can view and add shoe item(s) to store list</string>
 </resources>
