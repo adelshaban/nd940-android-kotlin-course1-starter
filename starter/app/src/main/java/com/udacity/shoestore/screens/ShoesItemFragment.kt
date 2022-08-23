@@ -20,6 +20,7 @@ class ShoesItemFragment : Fragment() {
 
         val binding: FragmentShoesItemBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_shoes_item, container, false)
+
         return binding.root
     }
 }

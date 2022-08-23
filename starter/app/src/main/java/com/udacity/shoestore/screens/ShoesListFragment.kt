@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentInstructionBinding
 import com.udacity.shoestore.databinding.FragmentShoesItemBinding
@@ -35,13 +37,20 @@ class ShoesListFragment : Fragment() {
         viewModel =
             ViewModelProvider(requireActivity()).get(ShoesListViewModel::class.java)
 
-        loadViewModelItems()
+        viewModel.listOfShoesLiveData.observe(requireActivity(), Observer{
+            shoeListView.removeAllViews()
+            loadShoesList(it)
+        })
+
+        binding.addNewShoe.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_shoesListFragment_to_shoeDetailsFragment)
+        )
 
         return binding.root
     }
 
-    private fun loadViewModelItems() {
-        for (shoe in viewModel.listOfShoesLiveData.value.orEmpty()){
+    private fun loadShoesList(shoesList : List<Shoe>) {
+        for (shoe in shoesList){
             addShoeItemToList(shoe)
         }
     }
