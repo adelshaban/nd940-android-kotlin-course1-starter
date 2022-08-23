@@ -20,6 +20,8 @@ import com.udacity.shoestore.viewmodels.ShoesListViewModel
 class ShoeDetailsFragment : Fragment() {
 
     lateinit var binding: FragmentShoeDetailsBinding
+    lateinit var shoeModel : Shoe
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,6 +40,9 @@ class ShoeDetailsFragment : Fragment() {
             findNavController().popBackStack()
         }
 
+        shoeModel = Shoe("", 0.0, "", "" )
+        binding.shoe = shoeModel
+
         return binding.root
     }
 
@@ -45,13 +50,6 @@ class ShoeDetailsFragment : Fragment() {
         var viewModel: ShoesListViewModel =
             ViewModelProvider(requireActivity()).get(ShoesListViewModel::class.java)
 
-        val shoe: Shoe = Shoe(
-            binding.shoeNameEditText.text.toString(),
-            binding.shoeSizeEditText.text.toString().toDouble(),
-            binding.companyEditText.text.toString(),
-            binding.descriptionEditText.text.toString()
-        )
-
-        viewModel.addShoe(shoe)
+    viewModel.addShoe(binding.shoe!!)
     }
 }

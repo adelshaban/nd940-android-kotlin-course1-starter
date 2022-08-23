@@ -4,6 +4,12 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"  >
 
+  <data>
+    <variable
+      name="shoe"
+      type="com.udacity.shoestore.models.Shoe" />
+  </data>
+
 
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -29,7 +35,8 @@
       android:layout_marginTop="12dp"
       android:layout_marginStart="156dp"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toTopOf="parent"
+      android:text="@={shoe.name}"/>
 
     <TextView
       android:id="@+id/textView2"
@@ -47,7 +54,8 @@
       android:layout_marginTop="56dp"
       android:layout_marginStart="156dp"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toTopOf="parent"
+      android:text="@={shoe.company}"/>
 
 
     <TextView
@@ -66,7 +74,8 @@
       android:layout_marginTop="24dp"
       android:layout_marginStart="156dp"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/company_edit_text" />
+      app:layout_constraintTop_toBottomOf="@+id/company_edit_text"
+      android:text="@={shoe.sizeString}"/>
     <TextView
       android:id="@+id/textView5"
       android:layout_width="wrap_content"
@@ -83,7 +92,8 @@
       android:layout_marginTop="180dp"
       android:layout_marginStart="156dp"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toTopOf="parent"
+      android:text="@={shoe.description}"/>
     <Button
       android:id="@+id/save_button"
       android:layout_width="wrap_content"
