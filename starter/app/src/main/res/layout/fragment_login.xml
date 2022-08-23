@@ -20,8 +20,9 @@
   <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingStart="@dimen/padding_fields"
     android:hint="@string/enter_your_user_name"
-    android:paddingStart="@dimen/padding_fields"/>
+    android:minHeight="48dp" />
 
   <TextView
     android:layout_width="match_parent"
@@ -34,8 +35,9 @@
   <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingStart="@dimen/padding_fields"
     android:hint="@string/enter_your_password"
-    android:paddingStart="@dimen/padding_fields"/>
+    android:minHeight="48dp" />
 
   <Button
     android:id="@+id/login_button"

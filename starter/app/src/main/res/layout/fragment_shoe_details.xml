@@ -19,6 +19,70 @@
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="0dp">
 
+    <Button
+      android:id="@+id/save_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="17dp"
+      android:layout_marginStart="80dp"
+      android:text="@string/save"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/description_edit_text" />
+    <Button
+      android:id="@+id/cancel_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:layout_marginStart="52dp"
+      android:text="@string/cancel"
+      app:layout_constraintStart_toEndOf="@+id/save_button"
+      app:layout_constraintTop_toBottomOf="@+id/description_edit_text" />
+
+    <EditText
+      android:id="@+id/shoe_name_edit_text"
+      android:layout_width="@dimen/edit_text_width"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:layout_marginStart="41dp"
+      android:minHeight="48dp"
+      android:text="@={shoe.name}"
+      app:layout_constraintStart_toEndOf="@+id/textView"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="SpeakableTextPresentCheck" />
+    <EditText
+      android:id="@+id/company_edit_text"
+      android:layout_width="@dimen/edit_text_width"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="41dp"
+      android:minHeight="48dp"
+      android:text="@={shoe.company}"
+      app:layout_constraintStart_toEndOf="@+id/textView2"
+      app:layout_constraintTop_toBottomOf="@+id/shoe_name_edit_text"
+      tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <EditText
+      android:id="@+id/shoe_size_edit_text"
+      android:layout_width="@dimen/edit_text_width"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="23dp"
+      android:layout_marginStart="39dp"
+      android:minHeight="48dp"
+      android:text="@={shoe.sizeString}"
+      app:layout_constraintStart_toEndOf="@+id/textView6"
+      app:layout_constraintTop_toBottomOf="@+id/company_edit_text"
+      tools:ignore="SpeakableTextPresentCheck" />
+    <EditText
+      android:id="@+id/description_edit_text"
+      android:layout_width="@dimen/edit_text_width"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_marginStart="41dp"
+      android:minHeight="48dp"
+      android:text="@={shoe.description}"
+      app:layout_constraintStart_toEndOf="@+id/textView5"
+      app:layout_constraintTop_toBottomOf="@+id/shoe_size_edit_text"
+      tools:ignore="SpeakableTextPresentCheck" />
     <TextView
       android:id="@+id/textView"
       android:layout_width="wrap_content"
@@ -28,92 +92,33 @@
       android:text="@string/shoe_name"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-      android:id="@+id/shoe_name_edit_text"
-      android:layout_width="@dimen/edit_text_width"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="12dp"
-      android:layout_marginStart="156dp"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      android:text="@={shoe.name}"/>
-
     <TextView
       android:id="@+id/textView2"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="76dp"
+      android:layout_marginTop="31dp"
       android:layout_marginStart="56dp"
       android:text="@string/company"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
-    <EditText
-      android:id="@+id/company_edit_text"
-      android:layout_width="@dimen/edit_text_width"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="56dp"
-      android:layout_marginStart="156dp"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      android:text="@={shoe.company}"/>
-
-
+      app:layout_constraintTop_toBottomOf="@+id/textView" />
     <TextView
       android:id="@+id/textView6"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="120dp"
+      android:layout_marginTop="45dp"
       android:layout_marginStart="56dp"
       android:text="@string/shoe_size"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
-    <EditText
-      android:id="@+id/shoe_size_edit_text"
-      android:layout_width="@dimen/edit_text_width"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="24dp"
-      android:layout_marginStart="156dp"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/company_edit_text"
-      android:text="@={shoe.sizeString}"/>
+      app:layout_constraintTop_toBottomOf="@+id/textView2" />
     <TextView
       android:id="@+id/textView5"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="44dp"
-      android:layout_marginStart="56dp"
+      android:layout_marginTop="45dp"
+      android:layout_marginStart="44dp"
       android:text="@string/description"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/textView6" />
-    <EditText
-      android:id="@+id/description_edit_text"
-      android:layout_width="@dimen/edit_text_width"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="180dp"
-      android:layout_marginStart="156dp"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      android:text="@={shoe.description}"/>
-    <Button
-      android:id="@+id/save_button"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="43dp"
-      android:layout_marginStart="53dp"
-      android:text="@string/save"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textView5" />
-    <Button
-      android:id="@+id/cancel_button"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="35dp"
-      android:layout_marginStart="60dp"
-      android:text="@string/cancel"
-      app:layout_constraintStart_toEndOf="@+id/save_button"
-      app:layout_constraintTop_toBottomOf="@+id/description_edit_text" />
-
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 
