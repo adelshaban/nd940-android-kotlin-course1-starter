@@ -9,7 +9,9 @@ import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentInstructionBinding
 import com.udacity.shoestore.databinding.FragmentShoesItemBinding
@@ -48,6 +50,8 @@ class ShoesListFragment : Fragment() {
 
         return binding.root
     }
+
+
 
     private fun loadShoesList(shoesList : List<Shoe>) {
         for (shoe in shoesList){
