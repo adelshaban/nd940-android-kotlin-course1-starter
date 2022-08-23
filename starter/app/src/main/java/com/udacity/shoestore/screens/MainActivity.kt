@@ -39,14 +39,5 @@ class MainActivity : AppCompatActivity() {
         binding.toolbar.setupWithNavController(navController, config)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.options_menu, menu)
-        return true
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val navController = findNavController(R.id.myNavHostFragment)
-        return item.onNavDestinationSelected(navController) ||
-                super.onOptionsItemSelected(item)
-    }
 }
